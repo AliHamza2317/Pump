@@ -1,0 +1,57 @@
+// This is your Prisma schema file
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Pump {
+  id                String   @id @default(auto()) @map("_id") @db.ObjectId
+  name              String   // Salarwala, ChakJhumra, Balair
+  petrolDate        DateTime?
+  petrolDelivery    Int?
+  petrolSale        Int?
+  dieselDate        DateTime?
+  dieselDelivery    Int?
+  dieselSale        Int?
+  mobileOilDate     DateTime?
+  mobileOilDelivery Int?
+  mobileOilSale     Int?
+}
+
+model Amount {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  name        String?
+  Date        DateTime?
+  totalsale   Int
+  expenditure Int
+}
+
+model Udhar {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  pumpName    String?
+  Date        DateTime?
+  Name        String
+  Amount      Int
+  Description String
+}
+
+model Credit {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  DepositDate DateTime?
+  SaleDate    DateTime?
+  Name        String
+  Amount      Int
+  site        Int
+}
+
+model Debit {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  Date        DateTime?
+  CompanyName String
+  Site        Int
+  Amount      Int
+}
