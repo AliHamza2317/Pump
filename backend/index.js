@@ -7,6 +7,7 @@ const prisma = new PrismaClient();
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
+const serverless = require('serverless-http');
 // Helper function for error handling
 const handleError = (res, error) => res.status(500).json({ error: error.message });
 
@@ -307,7 +308,4 @@ app.delete('/debits/:id', async (req, res) => {
 // });
 
 
-module.exports = async (req, res) => {
-  // This will create a serverless function to handle all requests
-  app(req, res);
-};
+module.exports.handler = serverless(app); 
