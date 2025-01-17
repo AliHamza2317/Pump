@@ -12,7 +12,7 @@ const handleError = (res, error) => res.status(500).json({ error: error.message 
 
 
 app.get('/', async (request, reply) => {
-  return { message: 'Hello, world!' };
+  return { message: 'Hello, worldd!' };
 });
 // Routes for `Pump`
 app.post('/pumps', async (req, res) => {
