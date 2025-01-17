@@ -301,10 +301,13 @@ app.delete('/debits/:id', async (req, res) => {
 });
 
 // Start the server
-const PORT = process.env.PORT || 3002;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+// const PORT = process.env.PORT || 3002;
+// app.listen(PORT, () => {
+//   console.log(`Server is running on port ${PORT}`);
+// });
 
 
-module.exports = app;
+module.exports = async (req, res) => {
+  // This will create a serverless function to handle all requests
+  app(req, res);
+};
