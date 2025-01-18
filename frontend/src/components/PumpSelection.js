@@ -337,9 +337,9 @@ const StockOptions = ({ pumpName, goBack }) => {
 
 const clearInputFields = (type) => {
   const fields = {
-      'Petrol': ['petrolDate', 'petrolDelivery', 'petrolSale'],
-      'Diesel': ['dieselDate', 'dieselDelivery', 'dieselSale'],
-      'Mobile Oil': ['mobileOilDate', 'mobileOilDelivery', 'mobileOilSale']
+      'petrol': ['petrolDate', 'petrolDelivery', 'petrolSale'],
+      'diesel': ['dieselDate', 'dieselDelivery', 'dieselSale'],
+      'mobileOil': ['mobileOilDate', 'mobileOilDelivery', 'mobileOilSale']
   };
 
   fields[type].forEach((field) => {
