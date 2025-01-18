@@ -28,7 +28,7 @@ const Balance = ({ goBack }) => {
       };
 
       try {
-        const response = await fetch('http://localhost:3002/credits', {
+        const response = await fetch('https://vercel.com/ali-hamzas-projects-837ae69a/backend-deploy/pump/credit', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -63,7 +63,7 @@ const Balance = ({ goBack }) => {
       };
 
       try {
-        const response = await fetch('http://localhost:3002/debits', {
+        const response = await fetch('https://vercel.com/ali-hamzas-projects-837ae69a/backend-deploy/pump/debit', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -236,7 +236,7 @@ const AmountSection = ({ pumpName, goBack }) => {
     };
 
     try {
-      const response = await fetch('http://localhost:3002/amounts', {
+      const response = await fetch('https://vercel.com/ali-hamzas-projects-837ae69a/backend-deploy/pump/addamount', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -360,7 +360,7 @@ const clearInputFields = (type) => {
     };
 
     try {
-        const response = await fetch('http://localhost:3002/pumps', {
+        const response = await fetch('https://vercel.com/ali-hamzas-projects-837ae69a/backend-deploy/pump/add', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -587,7 +587,7 @@ const UdharSection = ({ pumpName, goBack }) => {
     };
 
     try {
-      const response = await fetch('http://localhost:3002/udhars', {
+      const response = await fetch('https://vercel.com/ali-hamzas-projects-837ae69a/backend-deploy/pump/udhar', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
