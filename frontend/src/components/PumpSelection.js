@@ -351,33 +351,39 @@ const clearInputFields = (type) => {
       }
   });
 };
-  const handleStockUpdate = async (type, date, delivery, sale) => {
-    const pumpData = {
-        name: pumpName,
-        [`${type.toLowerCase()}Date`]: new Date(date),
-        [`${type.toLowerCase()}Delivery`]: parseInt(delivery),
-        [`${type.toLowerCase()}Sale`]: parseInt(sale)
-    };
+const handleStockUpdate = async (type, date, delivery, sale) => {
+  console.log('Date:', date);
+  console.log('Delivery:', delivery);
+  console.log('Sale:', sale);
 
-    try {
-        const response = await fetch('https://backend-deploy-nu.vercel.app/pump/add', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(pumpData)
-        });
+  const pumpData = {
+      name: pumpName,
+      [`${type.toLowerCase()}Date`]: new Date(date),
+      [`${type.toLowerCase()}Delivery`]: parseInt(delivery),
+      [`${type.toLowerCase()}Sale`]: parseInt(sale)
+  };
 
-        if (!response.ok) throw new Error('Failed to update stock');
-        const result = await response.json();
-        alert(`${type} stock updated successfully!`);
+  console.log('Data sent to backend:', pumpData);  // Log the data
 
-        clearInputFields(type)
-        
-    } catch (error) {
-        alert(error.message);
-    }
+  try {
+      const response = await fetch('https://backend-deploy-nu.vercel.app/pump/add', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(pumpData)
+      });
+
+      if (!response.ok) throw new Error('Failed to update stock');
+      const result = await response.json();
+      alert(`${type} stock updated successfully!`);
+      clearInputFields(type);
+
+  } catch (error) {
+      alert(error.message);
+  }
 };
+
 
   return (
     <div style={containerStyle}>
