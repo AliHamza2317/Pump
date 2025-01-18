@@ -358,9 +358,9 @@ const handleStockUpdate = async (type, date, delivery, sale) => {
 
   const pumpData = {
       name: pumpName,
-      [`${type.toLowerCase()}Date`]: new Date(date),
-      [`${type.toLowerCase()}Delivery`]: parseInt(delivery),
-      [`${type.toLowerCase()}Sale`]: parseInt(sale)
+      [`${type}Date`]: new Date(date),
+      [`${type}Delivery`]: parseInt(delivery),
+      [`${type}Sale`]: parseInt(sale)
   };
 
   console.log('Data sent to backend:', pumpData);  // Log the data
@@ -412,7 +412,7 @@ const handleStockUpdate = async (type, date, delivery, sale) => {
         />
         <button
           onClick={() => handleStockUpdate(
-            'Petrol',
+            'petrol',
             document.getElementById('petrolDate').value,
             document.getElementById('petrolDelivery').value,
             document.getElementById('petrolSale').value
@@ -472,7 +472,7 @@ const handleStockUpdate = async (type, date, delivery, sale) => {
         />
         <button
           onClick={() => handleStockUpdate(
-            'Diesel',
+            'diesel',
             document.getElementById('dieselDate').value,
             document.getElementById('dieselDelivery').value,
             document.getElementById('dieselSale').value
@@ -532,7 +532,7 @@ const handleStockUpdate = async (type, date, delivery, sale) => {
         />
         <button
           onClick={() => handleStockUpdate(
-            'MobileOil',
+            'mobileOil',
             document.getElementById('mobileOilDate').value,
             document.getElementById('mobileOilDelivery').value,
             document.getElementById('mobileOilSale').value
