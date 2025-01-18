@@ -124,7 +124,7 @@ const Dashboard = () => {
           </thead>
           <tbody>
             {amounts.map((amount) => (
-              <tr key={amount.id}>
+              <tr key={amount._id}>
                 <td>{amount.name || "N/A"}</td>
                 <td>{amount.Date || "N/A"}</td>
                 <td>{amount.totalsale}</td>
@@ -150,7 +150,7 @@ const Dashboard = () => {
           </thead>
           <tbody>
             {udhars.map((udhar) => (
-              <tr key={udhar.id}>
+              <tr key={udhar._id}>
                 <td>{udhar.pumpName || "N/A"}</td>
                 <td>{udhar.Date || "N/A"}</td>
                 <td>{udhar.Name}</td>
@@ -179,7 +179,7 @@ const Dashboard = () => {
           <tbody>
             {credits.length > 0 ? (
               credits.map((credit) => (
-                <tr key={credit.id}>
+                <tr key={credit._id}>
                   <td>{credit.DepositDate ? new Date(credit.DepositDate).toLocaleDateString() : "N/A"}</td>
                   <td>{credit.SaleDate ? new Date(credit.SaleDate).toLocaleDateString() : "N/A"}</td>
                   <td>{credit.Name}</td>
@@ -211,7 +211,7 @@ const Dashboard = () => {
           <tbody>
             {debits.length > 0 ? (
               debits.map((debit) => (
-                <tr key={debit.id}>
+                <tr key={debit._id}>
                   <td>{debit.Date ? new Date(debit.Date).toLocaleDateString() : "N/A"}</td>
                   <td>{debit.CompanyName}</td>
                   <td>{debit.Site}</td>
