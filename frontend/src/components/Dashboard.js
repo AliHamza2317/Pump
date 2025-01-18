@@ -14,11 +14,11 @@ const Dashboard = () => {
       const fetchData = async () => {
         try {
           const [pumpRes, amountRes, udharRes, creditRes, debitRes] = await Promise.all([
-            axios.get("https://vercel.com/ali-hamzas-projects-837ae69a/backend-deploy/pump/get"),
-            axios.get("https://vercel.com/ali-hamzas-projects-837ae69a/backend-deploy/pump/getamount"),
-            axios.get("https://vercel.com/ali-hamzas-projects-837ae69a/backend-deploy/pump/getudhar"),
-            axios.get("https://vercel.com/ali-hamzas-projects-837ae69a/backend-deploy/pump/getcredit"),
-            axios.get("https://vercel.com/ali-hamzas-projects-837ae69a/backend-deploy/pump/getdebit"),
+            axios.get("https://backend-deploy-nu.vercel.app/pump/get"),
+            axios.get("https://backend-deploy-nu.vercel.app/pump/getamount"),
+            axios.get("https://backend-deploy-nu.vercel.app/pump/getudhar"),
+            axios.get("https://backend-deploy-nu.vercel.app/pump/getcredit"),
+            axios.get("https://backend-deploy-nu.vercel.app/pump/getdebit"),
           ]);
           setPumps(pumpRes.data);
           setAmounts(amountRes.data);
