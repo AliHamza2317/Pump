@@ -25,6 +25,11 @@ const Dashboard = () => {
           setUdhars(udharRes.data);
           setCredits(creditRes.data);
           setDebits(debitRes.data);
+
+          console.log(pumpRes.data);
+          console.log(amountRes.data);
+          console.log(udharRes.data);
+          console.log(creditRes.data);
         } catch (error) {
           console.error("Error fetching data:", error);
         }
