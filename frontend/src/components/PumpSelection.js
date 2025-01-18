@@ -532,7 +532,7 @@ const handleStockUpdate = async (type, date, delivery, sale) => {
         />
         <button
           onClick={() => handleStockUpdate(
-            'Mobile Oil',
+            'MobileOil',
             document.getElementById('mobileOilDate').value,
             document.getElementById('mobileOilDelivery').value,
             document.getElementById('mobileOilSale').value
