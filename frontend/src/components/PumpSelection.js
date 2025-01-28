@@ -24,7 +24,7 @@ const Balance = ({ goBack }) => {
         SaleDate: new Date(saleDate),
         Name: name,
         Amount: parseInt(amount),
-        site: parseInt(site),
+        site: (site),
       };
 
       try {
@@ -58,7 +58,7 @@ const Balance = ({ goBack }) => {
       const debitData = {
         Date: new Date(debitDate),
         CompanyName: companyName,
-        Site: parseInt(debitSite),
+        Site: (debitSite),
         Amount: parseInt(debitAmount),
       };
 
@@ -134,7 +134,7 @@ const Balance = ({ goBack }) => {
           <div>
             <h4>Site</h4>
             <input
-              type="number"
+              type="text"
               placeholder="Enter Site"
               value={site}
               onChange={(e) => setSite(e.target.value)}
@@ -184,7 +184,7 @@ const Balance = ({ goBack }) => {
           <div>
             <h4>Site</h4>
             <input
-              type="number"
+              type="text"
               placeholder="Enter Site"
               value={debitSite}
               onChange={(e) => setDebitSite(e.target.value)}
