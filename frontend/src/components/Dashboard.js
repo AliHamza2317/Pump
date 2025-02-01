@@ -110,122 +110,122 @@
 //         ))}
 //       </section>
 
-//       {/* Amount Data */}
-//       <section>
-//         <h2>Amount Data</h2>
-//         <table className="table">
-//           <thead>
-//             <tr>
-//               <th>Name</th>
-//               <th>Date</th>
-//               <th>Total Sale</th>
-//               <th>Expenditure</th>
-//             </tr>
-//           </thead>
-//           <tbody>
-//             {amounts.map((amount) => (
-//               <tr key={amount._id}>
-//                 <td>{amount.name || "N/A"}</td>
-//                 <td>{amount.Date || "N/A"}</td>
-//                 <td>{amount.totalsale}</td>
-//                 <td>{amount.expenditure}</td>
-//               </tr>
-//             ))}
-//           </tbody>
-//         </table>
-//       </section>
+      // {/* Amount Data */}
+      // <section>
+      //   <h2>Amount Data</h2>
+      //   <table className="table">
+      //     <thead>
+      //       <tr>
+      //         <th>Name</th>
+      //         <th>Date</th>
+      //         <th>Total Sale</th>
+      //         <th>Expenditure</th>
+      //       </tr>
+      //     </thead>
+      //     <tbody>
+      //       {amounts.map((amount) => (
+      //         <tr key={amount._id}>
+      //           <td>{amount.name || "N/A"}</td>
+      //           <td>{amount.Date || "N/A"}</td>
+      //           <td>{amount.totalsale}</td>
+      //           <td>{amount.expenditure}</td>
+      //         </tr>
+      //       ))}
+      //     </tbody>
+      //   </table>
+      // </section>
 
-//       {/* Udhar Data */}
-//       <section>
-//         <h2>Udhar Data</h2>
-//         <table className="table">
-//           <thead>
-//             <tr>
-//               <th>Pump Name</th>
-//               <th>Date</th>
-//               <th>Name</th>
-//               <th>Amount</th>
-//               <th>Description</th>
-//             </tr>
-//           </thead>
-//           <tbody>
-//             {udhars.map((udhar) => (
-//               <tr key={udhar._id}>
-//                 <td>{udhar.pumpName || "N/A"}</td>
-//                 <td>{udhar.Date || "N/A"}</td>
-//                 <td>{udhar.Name}</td>
-//                 <td>{udhar.Amount}</td>
-//                 <td>{udhar.Description}</td>
-//               </tr>
-//             ))}
-//           </tbody>
-//         </table>
-//       </section>
+      // {/* Udhar Data */}
+      // <section>
+      //   <h2>Udhar Data</h2>
+      //   <table className="table">
+      //     <thead>
+      //       <tr>
+      //         <th>Pump Name</th>
+      //         <th>Date</th>
+      //         <th>Name</th>
+      //         <th>Amount</th>
+      //         <th>Description</th>
+      //       </tr>
+      //     </thead>
+      //     <tbody>
+      //       {udhars.map((udhar) => (
+      //         <tr key={udhar._id}>
+      //           <td>{udhar.pumpName || "N/A"}</td>
+      //           <td>{udhar.Date || "N/A"}</td>
+      //           <td>{udhar.Name}</td>
+      //           <td>{udhar.Amount}</td>
+      //           <td>{udhar.Description}</td>
+      //         </tr>
+      //       ))}
+      //     </tbody>
+      //   </table>
+      // </section>
 
 
-//       {/* Credit Data */}
-//       <section>
-//         <h2>Credit Data</h2>
-//         <table  className="table">
-//           <thead>
-//             <tr>
-//               <th>Deposit Date</th>
-//               <th>Sale Date</th>
-//               <th>Name</th>
-//               <th>Amount</th>
-//               <th>Site</th>
-//             </tr>
-//           </thead>
-//           <tbody>
-//             {credits.length > 0 ? (
-//               credits.map((credit) => (
-//                 <tr key={credit._id}>
-//                   <td>{credit.DepositDate ? new Date(credit.DepositDate).toLocaleDateString() : "N/A"}</td>
-//                   <td>{credit.SaleDate ? new Date(credit.SaleDate).toLocaleDateString() : "N/A"}</td>
-//                   <td>{credit.Name}</td>
-//                   <td>{credit.Amount}</td>
-//                   <td>{credit.site}</td>
-//                 </tr>
-//               ))
-//             ) : (
-//               <tr>
-//                 <td >No data available</td>
-//               </tr>
-//             )}
-//           </tbody>
-//         </table>
-//       </section>
+      // {/* Credit Data */}
+      // <section>
+      //   <h2>Credit Data</h2>
+      //   <table  className="table">
+      //     <thead>
+      //       <tr>
+      //         <th>Deposit Date</th>
+      //         <th>Sale Date</th>
+      //         <th>Name</th>
+      //         <th>Amount</th>
+      //         <th>Site</th>
+      //       </tr>
+      //     </thead>
+      //     <tbody>
+      //       {credits.length > 0 ? (
+      //         credits.map((credit) => (
+      //           <tr key={credit._id}>
+      //             <td>{credit.DepositDate ? new Date(credit.DepositDate).toLocaleDateString() : "N/A"}</td>
+      //             <td>{credit.SaleDate ? new Date(credit.SaleDate).toLocaleDateString() : "N/A"}</td>
+      //             <td>{credit.Name}</td>
+      //             <td>{credit.Amount}</td>
+      //             <td>{credit.site}</td>
+      //           </tr>
+      //         ))
+      //       ) : (
+      //         <tr>
+      //           <td >No data available</td>
+      //         </tr>
+      //       )}
+      //     </tbody>
+      //   </table>
+      // </section>
 
-//       {/* Debit Data */}
-//       <section>
-//         <h2>Debit Data</h2>
-//         <table className="table">
-//           <thead>
-//             <tr>
-//               <th>Date</th>
-//               <th>Company Name</th>
-//               <th>Site</th>
-//               <th>Amount</th>
-//             </tr>
-//           </thead>
-//           <tbody>
-//             {debits.length > 0 ? (
-//               debits.map((debit) => (
-//                 <tr key={debit._id}>
-//                   <td>{debit.Date ? new Date(debit.Date).toLocaleDateString() : "N/A"}</td>
-//                   <td>{debit.CompanyName}</td>
-//                   <td>{debit.Site}</td>
-//                   <td>{debit.Amount}</td>
-//                 </tr>
-//               ))
-//             ) : (
-//               <tr>
-//                 <td >No data available</td>
-//               </tr>
-//             )}
-//           </tbody>
-//         </table>
-//       </section>
+      // {/* Debit Data */}
+      // <section>
+      //   <h2>Debit Data</h2>
+      //   <table className="table">
+      //     <thead>
+      //       <tr>
+      //         <th>Date</th>
+      //         <th>Company Name</th>
+      //         <th>Site</th>
+      //         <th>Amount</th>
+      //       </tr>
+      //     </thead>
+      //     <tbody>
+      //       {debits.length > 0 ? (
+      //         debits.map((debit) => (
+      //           <tr key={debit._id}>
+      //             <td>{debit.Date ? new Date(debit.Date).toLocaleDateString() : "N/A"}</td>
+      //             <td>{debit.CompanyName}</td>
+      //             <td>{debit.Site}</td>
+      //             <td>{debit.Amount}</td>
+      //           </tr>
+      //         ))
+      //       ) : (
+      //         <tr>
+      //           <td >No data available</td>
+      //         </tr>
+      //       )}
+      //     </tbody>
+      //   </table>
+      // </section>
 //     </div>
 //   );
 // };
@@ -292,38 +292,67 @@ const Dashboard = () => {
 
   const getSelectedData = () => {
     switch (selectedData) {
-      
       case "Amount":
-        return amounts;
+        return {
+          columns: ["Pump Name", "Date", "Total Sale", "Expenditure"],
+          data: amounts.map(({ name, Date, totalsale, expenditure }) => ({
+            "Pump Name": name || "N/A",
+            Date: Date || "N/A",
+            "Total Sale": totalsale || "N/A",
+            Expenditure: expenditure || "N/A",
+          })),
+        };
       case "Udhar":
-        return udhars;
+        return {
+          columns: ["pumpName", "Date", "Name", "Amount", "Description"],
+          data: udhars.map(({ pumpName, Date, Name, Amount, Description }) => ({
+            pumpName: pumpName || "N/A",
+            Date: Date || "N/A",
+            Name: Name || "N/A",
+            Amount: Amount || "N/A",
+            Description: Description || "N/A",
+          })),
+        };
       case "Credit":
-        return credits;
+        return {
+          columns: ["Name", "DepositDate", "SaleDate", "Amount", "site"],
+          data: credits.map(({ Name, DepositDate, SaleDate, Amount, site }) => ({
+            Name: Name || "N/A",
+            DepositDate: DepositDate || "N/A",
+            SaleDate: SaleDate || "N/A",
+            Amount: Amount || "N/A",
+            site: site || "N/A"
+          })),
+        };
       case "Debit":
-        return debits;
+        return {
+          columns: ["CompanyName", "Date", "Site", "Amount"],
+          data: debits.map(({ CompanyName, Date, Site,Amount}) => ({
+            CompanyName: CompanyName || "N/A",
+            Date: Date || "N/A",
+            Site: Site || "N/A",
+            Amount: Amount || "N/A"
+          })),
+        };
       default:
-        return [];
+        return { columns: [], data: [] };
     }
   };
-
+  
   const paginatedPumpData = pumps
   .find((pump) => pump.name === selectedPump)?.data
   .slice((currentPage - 1) * rowsPerPage, currentPage * rowsPerPage) || [];
 
-const paginatedData = getSelectedData().slice(
-  (currentPage2 - 1) * rowsPerPage,
-  currentPage2 * rowsPerPage
-);
+  const paginatedData = getSelectedData().data.slice(
+    (currentPage2 - 1) * rowsPerPage,
+    currentPage2 * rowsPerPage
+  );
+  
 
 
   const totalPumpPages = Math.ceil((pumps.find((pump) => pump.name === selectedPump)?.data.length || 0) / rowsPerPage);
-  const totalDataPages = Math.ceil(getSelectedData().length / rowsPerPage);
-
-  const handleNextPage = () => {
-    if (currentPage < totalPumpPages) {
-      setCurrentPage(prev => prev + 1);
-    }
-  };
+  const selectedDataDetails = getSelectedData();
+  const totalDataPages = Math.ceil(selectedDataDetails.data.length / rowsPerPage);
   
   const handleNextPage2 = () => {
     if (currentPage2 < totalDataPages) {
@@ -331,14 +360,29 @@ const paginatedData = getSelectedData().slice(
     }
   };
   
+  const handlePreviousPage2 = () => {
+    setCurrentPage2(prev => Math.max(prev - 1, 1));
+  };
+  const handleNextPage = () => {
+    if (currentPage < totalPumpPages) {
+      setCurrentPage(prev => prev + 1);
+    }
+  };
+  
+  // const handleNextPage2 = () => {
+  //   if (currentPage2 < totalDataPages) {
+  //     setCurrentPage2(prev => prev + 1);
+  //   }
+  // };
+  
 
   const handlePreviousPage = () => {
     setCurrentPage((prev) => Math.max(prev - 1, 1));
   };
 
-  const handlePreviousPage2 = () => {
-    setCurrentPage2((prev) => Math.max(prev - 1, 1));
-  };
+  // const handlePreviousPage2 = () => {
+  //   setCurrentPage2((prev) => Math.max(prev - 1, 1));
+  // };
 
   const showButton = (index) => {
     let newVisibility = [...visibleButtons];
@@ -456,56 +500,57 @@ const paginatedData = getSelectedData().slice(
 
       {/* Display Selected Data */}
       {selectedData && (
-        <section>
-          <h2>{selectedData} Data</h2>
-          <table className="table">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Date</th>
-                <th>Total Sale</th>
-                <th>Expenditure</th>
+  <section>
+    <h2>{selectedData} Data</h2>
+    <table className="table">
+      <thead>
+        <tr>
+          {getSelectedData().columns.map((col, index) => (
+            <th key={index}>{col}</th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {getSelectedData().data.length > 0 ? (
+          getSelectedData()
+            .data.slice((currentPage2 - 1) * rowsPerPage, currentPage2 * rowsPerPage)
+            .map((row, index) => (
+              <tr key={index}>
+                {getSelectedData().columns.map((col, i) => (
+                  <td key={i}>{row[col]}</td>
+                ))}
               </tr>
-            </thead>
-            <tbody>
-              {paginatedData.length > 0 ? (
-                paginatedData.map((data, index) => (
-                  <tr key={index}>
-                    <td>{data.name || "N/A"}</td>
-                    <td>{data.Date || "N/A"}</td>
-                    <td>{data.totalsale || "N/A"}</td>
-                    <td>{data.expenditure || "N/A"}</td>
-                  </tr>
-                ))
-              ) : (
-                <tr>
-                  <td colSpan="4">No data available</td>
-                </tr>
-              )}
-            </tbody>
-          </table>
+            ))
+        ) : (
+          <tr>
+            <td colSpan={getSelectedData().columns.length}>No data available</td>
+          </tr>
+        )}
+      </tbody>
+    </table>
 
-          <div className="pagination-controls">
-            <button
-              onClick={handlePreviousPage2}
-              disabled={currentPage2 === 1}
-              className="pagination-button"
-            >
-              Previous
-            </button>
-            <span>
-              Page {currentPage2} of {totalDataPages}
-            </span>
-            <button
-              onClick={handleNextPage2}
-              disabled={currentPage2 === totalDataPages}
-              className="pagination-button"
-            >
-              Next
-            </button>
-          </div>
-        </section>
-      )}
+    <div className="pagination-controls">
+      <button
+        onClick={handlePreviousPage2}
+        disabled={currentPage2 === 1}
+        className="pagination-button"
+      >
+        Previous
+      </button>
+      <span>
+        Page {currentPage2} of {Math.ceil(getSelectedData().data.length / rowsPerPage)}
+      </span>
+      <button
+        onClick={handleNextPage2}
+        disabled={currentPage2 === Math.ceil(getSelectedData().data.length / rowsPerPage)}
+        className="pagination-button"
+      >
+        Next
+      </button>
+    </div>
+  </section>
+)}
+
     </div>
   );
 };

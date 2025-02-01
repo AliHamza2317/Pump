@@ -230,7 +230,7 @@ const AmountSection = ({ pumpName, goBack }) => {
   const saveAmount = async () => {
     const data = {
       name: pumpName,
-      Date: new Date(date),  // Send date to the backend
+      date: new Date(date),  // Send date to the backend
       totalsale: parseInt(totalSale, 10),
       expenditure: parseInt(expenditure, 10),
     };
